@@ -1,0 +1,15 @@
+@use '../util/variables' as *;
+
+@mixin button-shadow{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@mixin btn-color {
+   background: linear-gradient($color-secondary 0%, $color-Primary 100%);
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,22 @@
+@use '../util' as u;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body {
+    font-family: u.$font-primary;
+}
+
+a{
+    color: black;
+}
+b{
+    &:hover{
+        color: u.$color-Primary;
+    }
+}

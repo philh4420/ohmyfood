@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Food ordering service",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/styles.scss css/styles.css"
+  },
+  "author": "Phil Higdon",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.56.2"
+  }
+}
