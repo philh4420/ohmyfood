@@ -568,6 +568,10 @@ main .card__Restaurants__text__heigth {
   line-height: 1.4em;
 }
 
+.menu__content {
+  width: 100%;
+}
+
 .menu__section {
   display: flex;
   flex-direction: column;
@@ -620,7 +624,7 @@ main .card__Restaurants__text__heigth {
 }
 .menu__section .text-wrap {
   flex: none;
-  width: 74%;
+  width: 75%;
   margin: 1em 0em 1em 1em;
   line-height: 1.5em;
   transition: width 500ms ease-in-out;
@@ -642,7 +646,7 @@ main .card__Restaurants__text__heigth {
 .menu__price {
   text-align: center;
   flex: none;
-  width: 22%;
+  width: 25%;
 }
 .menu__price b {
   position: relative;
