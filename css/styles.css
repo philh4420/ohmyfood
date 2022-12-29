@@ -508,4 +508,146 @@ footer .container p {
   font-size: 1.2em;
 }
 
+main {
+  background-color: #f6f6f6;
+  margin-top: 5em;
+  padding: 20px;
+}
+main h2 {
+  display: flex;
+  justify-content: center;
+  margin: 1em 9em 1em 0em;
+}
+main h2:hover {
+  color: #9356dc;
+}
+main .card_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 35px;
+}
+main .card_section img {
+  object-fit: cover;
+  border-radius: 1em 1em 0em 0em;
+  height: 9.5em;
+  width: 21em;
+}
+main .card__Restaurants {
+  background-color: white;
+  width: 21em;
+  height: 14em;
+  border-radius: 1em 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+}
+main .card__Restaurants p {
+  font-weight: 300;
+}
+main .card__Restaurants p:hover {
+  color: #9356dc;
+}
+main .card__Restaurants span {
+  position: relative;
+  left: 17.4em;
+  bottom: 9em;
+  background-color: #99e2d0;
+  color: #217460;
+  padding: 0.4em 1.5em;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+main .card__Restaurants__text {
+  margin: 5px 14px;
+  line-height: 1.4em;
+}
+main .card__Restaurants__text__heigth {
+  margin: -15px 14px;
+  line-height: 1.4em;
+}
+
+.menu__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+.menu__section .menu__card {
+  display: flex;
+  justify-content: space-between;
+  height: 5em;
+  background-color: white;
+  border-radius: 1.2em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  position: relative;
+}
+.menu__section .menu__card .rotate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 0;
+  width: 30%;
+  background-color: #99e2d0;
+  border-radius: 0 1.2em 1.2em 0;
+  overflow: hidden;
+  transition: 500ms ease-in-out;
+}
+.menu__section .menu__card:hover .rotate {
+  width: 10em;
+  transition: 500ms ease-in-out;
+}
+.menu__section .menu__card .check {
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  white-space: nowrap;
+  transform: rotate(95deg);
+  transition: all 0.5s;
+}
+.menu__section .menu__card:hover .check {
+  transform: rotate(-360deg);
+  transition: all 0.5s;
+}
+.menu__section #card-height {
+  line-height: 100%;
+  font-size: medium;
+}
+.menu__section .text-wrap {
+  flex: none;
+  width: 74%;
+  margin: 1em 0em 1em 1em;
+  line-height: 1.5em;
+  transition: width 500ms ease-in-out;
+}
+.menu__section .text-wrap:hover {
+  transition: width 500ms ease-in-out;
+  width: 56%;
+}
+.menu__section .text-wrap p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__section .text-wrap p:hover {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu__price {
+  text-align: center;
+  flex: none;
+  width: 22%;
+}
+.menu__price b {
+  position: relative;
+  top: 2.5em;
+  transition: width 500ms ease-in-out;
+}
+
 /*# sourceMappingURL=styles.css.map */
