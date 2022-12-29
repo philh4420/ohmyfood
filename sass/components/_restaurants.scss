@@ -71,6 +71,10 @@ main{
    }
 }
 
+.menu__content {
+    width: 100%;
+}
+
 .menu__section{
     display: flex;
     flex-direction: column;
@@ -127,7 +131,7 @@ main{
     }
     .text-wrap {
         flex: none;
-        width: 74%;
+        width: 75%;
         margin: 1em 0em 1em 1em;
         line-height: 1.5em;
         transition: width 500ms ease-in-out;
@@ -150,7 +154,7 @@ main{
 .menu__price{
     text-align: center;
     flex: none;
-    width: 22%;
+    width: 25%;
 
     b{
        position: relative;
