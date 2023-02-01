@@ -163,24 +163,14 @@ b:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .res-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
   .restaurants {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
-    height: 45em;
-    padding: 10em 0em;
-  }
-  .restaurants h2 {
-    position: absolute;
-    bottom: -4em;
-    left: 13em;
-    line-height: 0;
-  }
-  .navigation h2 {
-    position: relative;
-    left: 5em;
   }
   .wrap img {
     width: 100%;
@@ -191,9 +181,6 @@ b:hover {
     margin: 0 auto;
     width: 4.5em;
   }
-  .menu__content {
-    width: 45em;
-  }
   .menu__section {
     display: flex;
     flex-direction: column;
@@ -203,7 +190,6 @@ b:hover {
     padding-top: 2em;
   }
   .menu__button {
-    position: relative;
     left: 15em;
   }
   .menu__header {
@@ -225,47 +211,44 @@ b:hover {
 @media screen and (min-width: 1024px) {
   .restaurants {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 45em;
     gap: 1em;
-  }
-  .restaurants h2 {
-    position: absolute;
-    bottom: -4em;
-    left: 20em;
-    line-height: 0;
   }
   .menu__header {
     position: absolute;
     left: 2em;
-    bottom: 29em;
+    bottom: 78em;
   }
-  .menu__content {
-    width: 60em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8em;
-  }
-  .menu__card {
-    width: 20em;
-    font-size: small;
-  }
-  .menu__subtitle {
-    width: 19em;
-  }
-  .menu__button {
-    position: absolute;
-    top: 27em;
-    left: 24em;
-    margin: 0 auto;
+  .heart-section {
+    position: relative;
+    right: 2em;
   }
 }
+.menu__card {
+  width: 20em;
+  font-size: small;
+}
+
+.menu__subtitle {
+  width: 19em;
+}
+
+.menu__section {
+  flex-direction: row;
+}
+
+.menu__button {
+  top: 27em;
+  left: 24em;
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 1383px) {
   .navigation {
     height: 15em;
+    padding-top: 2em;
   }
   .navigation__button {
     display: flex;
@@ -277,26 +260,20 @@ b:hover {
   .navigation__button button {
     display: flex;
     white-space: nowrap;
-    padding: 0em 2em 0em 4em;
   }
   .navigation__button .circle__1,
-  .navigation__button .circle__2 {
+  .navigation__button .circle__2,
+  .navigation__button .circle__3 {
     position: relative;
     left: -5em;
   }
   .restaurants {
-    height: 45em;
     position: relative;
   }
-  .restaurants h2 {
-    position: absolute;
-    bottom: 26em;
-    right: 5em;
-  }
   .menu__header {
-    position: absolute;
-    left: 2em;
-    bottom: 30em;
+    position: relative;
+    left: 13em;
+    bottom: 12em;
     font-size: larger;
   }
   .menu__header i {
@@ -321,7 +298,6 @@ b:hover {
     font-size: small;
   }
   .menu__button {
-    position: absolute;
     top: 30em;
     left: 36em;
     margin: 0 auto;
@@ -340,10 +316,17 @@ b:hover {
     width: 155em;
   }
   .menu__button {
-    position: absolute;
     right: 50em;
   }
 }
+.res-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3em;
+}
+
 .logo {
   height: 3.5em;
   display: flex;
@@ -434,7 +417,6 @@ b:hover {
 .menu__content {
   background-color: #f6f6f6;
   border-radius: 2.6em 2.6em 0 0;
-  width: 24.1em;
   position: relative;
   top: 14em;
   margin: 0 auto;
@@ -445,10 +427,8 @@ b:hover {
 .menu__header {
   display: flex;
   align-items: center;
-  position: relative;
 }
 .menu__header h2 {
-  position: absolute;
   white-space: nowrap;
   font-family: shrikhand;
   font-size: 1.4em;
@@ -472,8 +452,8 @@ b:hover {
 
 .menu__button {
   position: relative;
-  left: 5em;
-  top: 3em;
+  left: -50em;
+  top: 14em;
   font-size: 1em;
   height: 3em;
   color: white;
@@ -501,7 +481,6 @@ main {
 main h2 {
   display: flex;
   justify-content: center;
-  margin: 1em 9em 1em 0em;
 }
 main h2:hover {
   color: #9356dc;
@@ -595,7 +574,6 @@ main .card__restaurants__text {
   flex-direction: column;
 }
 .navigation h2 {
-  margin: 1em 9em 0em 0em;
   padding-bottom: 13px;
 }
 .navigation h2:hover {
@@ -638,16 +616,13 @@ main .card__restaurants__text {
   align-items: center;
   justify-content: center;
   position: relative;
-  right: 7em;
+  right: 5em;
   background-color: #9356dc;
   border-radius: 2em;
   color: white;
   font-size: 0.9em;
   height: 2em;
   width: 2em;
-}
-.navigation__button button .circle__3 {
-  left: -5.28em;
 }
 .navigation__button button .fa-store {
   margin-right: 12em;
@@ -698,7 +673,6 @@ main {
 main h2 {
   display: flex;
   justify-content: center;
-  margin: 1em 9em 1em 0em;
 }
 main h2:hover {
   color: #9356dc;
@@ -745,13 +719,9 @@ main .card__Restaurants__text {
   margin: 5px 14px;
   line-height: 1.4em;
 }
-main .card__Restaurants__text__heigth {
+main .card__Restaurants__text__height {
   margin: -15px 14px;
   line-height: 1.4em;
-}
-
-.menu__content {
-  width: 100%;
 }
 
 .menu__section {
