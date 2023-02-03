@@ -69,8 +69,8 @@
     bottom: 78em;
   }
   .heart-section {
-    position: relative;
-    right: 2em;
+    position: absolute;
+    right: 19em;
   }
 }
 
@@ -108,31 +108,25 @@
       white-space: nowrap;
       // padding: 0em 2em 0em 4em;
     }
-    .circle__1,
-    .circle__2,
-    .circle__3 {
-      position: relative;
-      left: -5em;
-    }
   }
 
   .restaurants {
     position: relative;
   }
   .menu__header {
-    position: relative;
-    left: 13em;
-    bottom: 12em;
+    position: absolute;
+    left: 3em;
+    bottom: 27em;
     font-size: larger;
 
     i {
       display: inline-flex;
       position: absolute;
-      left: 50em;
+      left: 96em;
     }
   }
   .menu__content {
-    width: 85em;
+    width: 86em;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -168,7 +162,7 @@
 //large desktop//
 @media screen and (min-width: 2560px) {
   .menu__content {
-    width: 155em;
+    width: 160em;
   }
   .menu__button {
     right: 50em;
