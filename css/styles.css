@@ -222,8 +222,8 @@ b:hover {
     bottom: 78em;
   }
   .heart-section {
-    position: relative;
-    right: 2em;
+    position: absolute;
+    right: 19em;
   }
 }
 .menu__card {
@@ -261,28 +261,22 @@ b:hover {
     display: flex;
     white-space: nowrap;
   }
-  .navigation__button .circle__1,
-  .navigation__button .circle__2,
-  .navigation__button .circle__3 {
-    position: relative;
-    left: -5em;
-  }
   .restaurants {
     position: relative;
   }
   .menu__header {
-    position: relative;
-    left: 13em;
-    bottom: 12em;
+    position: absolute;
+    left: 3em;
+    bottom: 27em;
     font-size: larger;
   }
   .menu__header i {
     display: inline-flex;
     position: absolute;
-    left: 50em;
+    left: 96em;
   }
   .menu__content {
-    width: 85em;
+    width: 86em;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -313,7 +307,7 @@ b:hover {
 }
 @media screen and (min-width: 2560px) {
   .menu__content {
-    width: 155em;
+    width: 160em;
   }
   .menu__button {
     right: 50em;
@@ -611,12 +605,13 @@ main .card__restaurants__text {
 .navigation__button button:hover i {
   color: #9356dc;
 }
-.navigation__button button span {
+.navigation__button button .circle__1,
+.navigation__button button .circle__2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  right: 5em;
+  position: absolute;
+  right: 21em;
   background-color: #9356dc;
   border-radius: 2em;
   color: white;
@@ -624,8 +619,28 @@ main .card__restaurants__text {
   height: 2em;
   width: 2em;
 }
+.navigation__button button .circle__3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 21em;
+  background-color: #9356dc;
+  border-radius: 2em;
+  color: white;
+  font-size: 0.9em;
+  height: 2em;
+  width: 2em;
+}
+.navigation__button button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 3em;
+}
 .navigation__button button .fa-store {
-  margin-right: 12em;
+  margin-right: 9em;
 }
 
 .closer {

@@ -287,10 +287,11 @@ main {
             color: u.$color-Primary;
         }
 
-        span {
+        .circle__1,
+        .circle__2 {
             @include u.flex-center;
-            position: relative;
-            right: 5em;
+            position: absolute;
+            right: 21em;
             background-color: u.$color-Primary;
             border-radius: 2em;
             color: u.$color-background;
@@ -298,9 +299,24 @@ main {
             height: 2em;
             width: 2em;
         }
-
+        .circle__3 {
+            @include u.flex-center;
+            position: absolute;
+            right: 21em;
+            background-color: u.$color-Primary;
+            border-radius: 2em;
+            color: u.$color-background;
+            font-size: 0.9em;
+            height: 2em;
+            width: 2em;
+        }
+        .icon {
+            @include u.flex-center;
+            position: relative;
+            left: 3em;
+        }
         .fa-store {
-            margin-right: 12em;
+            margin-right: 9em;
         }
     }
 }
