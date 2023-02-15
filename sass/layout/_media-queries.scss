@@ -1,8 +1,8 @@
 //tablet//
 @media screen and (min-width: 768px) {
-  body {
-    width: 97.6vw;
-  }
+  // body {
+  //   width: 97.6vw;
+  // }
   .res-wrapper {
     display: flex;
     flex-direction: row;
@@ -44,26 +44,23 @@
     padding-top: 2em;
   }
 
-  footer {
-    .container {
-      display: flex;
-      align-items: center;
-      gap: 2em;
-      position: relative;
-    }
+  footer .container {
+    align-items: center;
+    gap: 2em;
   }
 }
 //small desktop//
 @media screen and (min-width: 1024px) {
-  body {
-    width: 98.3vw;
-  }
+  // body {
+  //   width: 98.3vw;
+  // }
   .restaurants {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1em;
+    margin-top: 5%;
   }
   .res-wrapper {
     gap: 4em;
@@ -92,28 +89,27 @@
   .menu__subtitle {
     padding-top: 0px !important;
   }
-}
 
-.menu__card {
-  width: 20em;
-  font-size: small;
-}
-.menu__subtitle {
-  width: 19em;
-}
-.menu__section {
-  flex-direction: row;
-}
-.menu__button {
-  margin: 0 auto;
-}
+  .menu__card {
+    width: 20em;
+    font-size: small;
+  }
+  .menu__subtitle {
+    width: 19em;
+  }
+  .menu__section {
+    flex-direction: row;
+  }
+  .menu__button {
+    margin: 0 auto;
+  }
 
-footer .container {
-  flex-direction: row !important;
-  justify-content: center;
-  height: 5em !important;
+  footer .alt__container {
+    flex-direction: row !important;
+    justify-content: center;
+    height: 5em !important;
+  }
 }
-
 //medium desktop//
 @media screen and (min-width: 1383px) {
   .navigation {
@@ -167,8 +163,7 @@ footer .container {
     margin: 0 auto;
   }
 
-  footer,
-  .container {
+  footer .container {
     display: flex;
     flex-direction: row !important;
     align-items: center;
@@ -179,58 +174,58 @@ footer .container {
   }
 }
 //large desktop//
-@media screen and (min-width: 2560px) {
-  body {
-    height: 100% !important;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+// @media screen and (min-width: 2560px) {
+//   body {
+//     // height: 100% !important;
+//     // width: 100% !important;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//   }
 
-  .res-wrapper {
-    height: 100%;
-    flex-wrap: nowrap;
-  }
-  .card_section {
-    width: 100%;
-    height: 100%;
-  }
-  main h2 {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-  .menu__header .heart-section {
-    padding-top: 0em;
-  }
+//   .res-wrapper {
+//     height: 100%;
+//     flex-wrap: nowrap;
+//   }
+//   .card_section {
+//     width: 100%;
+//     height: 100%;
+//   }
+//   main h2 {
+//     margin-top: 0 !important;
+//     margin-bottom: 0 !important;
+//   }
+//   .menu__header .heart-section {
+//     padding-top: 0em;
+//   }
 
-  .menu__content {
-    width: 100vw !important;
-    justify-content: space-around;
-    height: 100vh;
-    padding: 1em;
-    margin: 1em;
-    margin-top: 10% !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
-    padding-bottom: 10em;
-  }
-  .menu__header {
-    width: 100vw !important;
-    padding: 1em;
-    margin: 1em;
-  }
-  .menu__subtitle {
-    width: 30%;
-    margin: 0 !important;
-  }
-  .menu__section {
-    width: 100%;
-    gap: 4em !important;
-  }
-  .menu__card {
-    width: 90%;
-  }
-}
+//   .menu__content {
+//     width: 100vw !important;
+//     justify-content: space-around;
+//     height: 100vh;
+//     padding: 1em;
+//     margin: 1em;
+//     margin-top: 10% !important;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     gap: 5em;
+//     padding-bottom: 10em;
+//   }
+//   .menu__header {
+//     width: 100vw !important;
+//     padding: 1em;
+//     margin: 1em;
+//   }
+//   .menu__subtitle {
+//     width: 30%;
+//     margin: 0 !important;
+//   }
+//   .menu__section {
+//     width: 100%;
+//     gap: 4em !important;
+//   }
+//   .menu__card {
+//     width: 90%;
+//   }
+// }

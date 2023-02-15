@@ -146,11 +146,17 @@
 }
 
 // cards
-main {
+.restaurants {
     background-color: u.$light-gray;
     margin-top: 5em;
     padding: 20px;
 
+    h2 {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     h2 {
         &:hover {
             color: u.$color-Primary;
@@ -337,9 +343,9 @@ footer {
     color: u.$color-background;
     .container {
         display: flex;
-        flex-direction: column !important;
+        flex-direction: column;
         gap: 0.5em;
-        height: 13.5em !important;
+        height: 13.5em;
         margin-left: 2em;
         color: u.$color-background;
         position: relative;
