@@ -5,7 +5,11 @@
   }
   .res-wrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
   }
   .restaurants {
     display: flex;
@@ -60,6 +64,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 1em;
+  }
+  .res-wrapper {
+    gap: 4em;
   }
 
   .menu__content {
@@ -126,6 +133,9 @@ footer .container {
   .restaurants {
     position: relative;
   }
+  .res-wrapper {
+    gap: 3em;
+  }
   .menu__header {
     font-size: larger;
     justify-content: space-around;
@@ -171,19 +181,20 @@ footer .container {
 //large desktop//
 @media screen and (min-width: 2560px) {
   body {
-    height: 100vh;
-    width: 100vw;
+    height: 100% !important;
+    width: 100% !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
 
   .res-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3em;
+    height: 100%;
+    flex-wrap: nowrap;
+  }
+  .card_section {
+    width: 100%;
+    height: 100%;
   }
   main h2 {
     margin-top: 0 !important;
