@@ -19,6 +19,7 @@
 .wrap {
     position: absolute;
     top: 3.5em;
+
     img {
         object-fit: cover;
         width: 100%;
@@ -86,22 +87,19 @@
     background-color: u.$light-gray;
     border-radius: 2.6em 2.6em 0 0;
     position: relative;
-    top: 14em;
     margin: 0 auto;
-    margin-bottom: 14em;
-    padding: 5em 2em;
+    padding: 0em 1em;
 }
 //menu subheader section//
 .menu__header {
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
     h2 {
         white-space: nowrap;
         font-family: u.$font-secondary;
         font-size: 1.4em;
         font-weight: 300;
-        margin-right: 5em;
     }
 }
 
@@ -119,12 +117,15 @@
         margin: 1em 0em;
     }
 }
-
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 10px 10px;
+}
 //order button//
 .menu__button {
     position: relative;
-    left: -50em;
-    top: 14em;
     font-size: 1em;
     height: 3em;
     color: u.$color-background;
@@ -151,8 +152,6 @@ main {
     padding: 20px;
 
     h2 {
-        display: flex;
-        justify-content: center;
         &:hover {
             color: u.$color-Primary;
         }
@@ -209,29 +208,31 @@ main {
 
 // Icons
 .heart-section {
-    margin-top: -2em;
-
+    // margin-top: -2em;
+    display: grid;
     .icon--full {
         color: u.$color-background;
     }
     &:hover .icon--full {
-        background: linear-gradient(u.$color-secondary 0%, u.$color-Primary 100%);
-        background-clip: inherit;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-        transition: color 0.9s;
+        @include u.fill-up;
     }
     &:hover .icon--empty {
-        opacity: 0;
-        transition-duration: 0.5s;
+        @include u.empty;
+    }
+    &:active .icon--full {
+        @include u.fill-up;
+    }
+    &:active .icon--empty {
+        @include u.empty;
     }
 }
 .fa-heart {
-    position: absolute;
-    left: 11em;
+    position: relative !important;
+    left: 0px !important;
     font-size: 1.5em;
     cursor: pointer;
+    grid-column: 1;
+    grid-row: 1;
 }
 .arrow {
     position: relative;
@@ -336,9 +337,9 @@ footer {
     color: u.$color-background;
     .container {
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         gap: 0.5em;
-        height: 13.5em;
+        height: 13.5em !important;
         margin-left: 2em;
         color: u.$color-background;
         position: relative;

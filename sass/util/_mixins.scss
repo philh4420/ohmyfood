@@ -1,15 +1,40 @@
-@use '../util/variables' as *;
+@use "../util/variables" as *;
 
-@mixin button-shadow{
+@mixin button-shadow {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @mixin btn-color {
-   background: linear-gradient($color-secondary 0%, $color-Primary 100%);
+    background: linear-gradient($color-secondary 0%, $color-Primary 100%);
 }
 
 @mixin flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@mixin p-fade {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin text-fade-in {
+    transition: width 500ms ease-in-out;
+    width: 56%;
+}
+
+@mixin fill-up {
+    background: linear-gradient($color-secondary 0%, $color-Primary 100%);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: color 0.9s;
+}
+
+@mixin empty {
+    opacity: 0;
+    transition-duration: 0.5s;
 }

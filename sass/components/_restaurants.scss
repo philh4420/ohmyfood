@@ -1,156 +1,151 @@
 @use "../util/" as u;
 
 main {
-    background-color: u.$light-gray;
-    margin-top: 5em;
-    padding: 20px;
+  background-color: u.$light-gray;
+  margin-top: 5em;
+  padding: 20px;
 
-    h2 {
-        display: flex;
-        justify-content: center;
-        &:hover {
-            color: u.$color-Primary;
-        }
+  h2 {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    &:hover {
+      color: u.$color-Primary;
     }
-    .card_section {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        padding-bottom: 35px;
+  }
+  .card_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 35px;
 
-        img {
-            object-fit: cover;
-            border-radius: 1em 1em 0em 0em;
-            height: 9.5em;
-            width: 21em;
-        }
+    img {
+      object-fit: cover;
+      border-radius: 1em 1em 0em 0em;
+      height: 9.5em;
+      width: 21em;
     }
-    .card__Restaurants {
-        background-color: u.$color-background;
-        width: 21em;
-        height: 14em;
-        border-radius: 1em 1em;
-        @include u.button-shadow;
-        position: relative;
+  }
+  .card__Restaurants {
+    background-color: u.$color-background;
+    width: 21em;
+    height: 14em;
+    border-radius: 1em 1em;
+    @include u.button-shadow;
+    position: relative;
+  }
 
-        p {
-            font-weight: 300;
-            &:hover {
-                color: u.$color-Primary;
-            }
-        }
-
-        span {
-            position: relative;
-            left: 17.4em;
-            bottom: 9em;
-            background-color: u.$color-tertiary;
-            color: darken(u.$color-tertiary, 45%);
-            padding: 0.4em 1.5em;
-            border-radius: 5px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-        &__text {
-            margin: 5px 14px;
-            line-height: 1.4em;
-
-            &__height {
-                margin: -15px 14px;
-                line-height: 1.4em;
-            }
-        }
+  p {
+    font-weight: 300;
+    &:hover {
+      color: u.$color-Primary;
     }
+  }
+}
+
+.menu__header {
+  width: 100%;
 }
 
 .menu__content {
-    // width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+  padding-bottom: 4em;
 }
 
 .menu__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5em;
+
+  .menu__card {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    gap: 1.5em;
+    height: 5em;
+    background-color: u.$color-background;
+    border-radius: 1.2em;
+    @include u.button-shadow;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    position: relative;
 
-    .menu__card {
-        display: flex;
-        justify-content: space-between;
-        height: 5em;
-        background-color: u.$color-background;
-        border-radius: 1.2em;
-        @include u.button-shadow;
-        overflow: hidden;
-        white-space: nowrap;
-        cursor: pointer;
-        position: relative;
-
-        .rotate {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            right: 0;
-            width: 30%;
-            background-color: u.$color-tertiary;
-            border-radius: 0 1.2em 1.2em 0;
-            overflow: hidden;
-            transition: 500ms ease-in-out;
-        }
-        &:hover .rotate {
-            width: 10em;
-            transition: 500ms ease-in-out;
-        }
-
-        .check {
-            color: u.$color-background;
-            border-radius: 50%;
-            font-size: 1.5em;
-            white-space: nowrap;
-            transform: rotate(95deg);
-            transition: all 0.5s;
-        }
-
-        &:hover .check {
-            transform: rotate(-360deg);
-            transition: all 0.5s;
-        }
+    .rotate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      right: 0;
+      width: 30%;
+      background-color: u.$color-tertiary;
+      border-radius: 0 1.2em 1.2em 0;
+      overflow: hidden;
+      transition: 500ms ease-in-out;
     }
-    #card-height {
-        line-height: 100%;
-        font-size: medium;
+    &:hover .rotate {
+      width: 10em;
+      transition: 500ms ease-in-out;
     }
-    .text-wrap {
-        flex: none;
-        width: 75%;
-        margin: 1em 0em 1em 1em;
-        line-height: 1.5em;
-        transition: width 500ms ease-in-out;
-        &:hover {
-            transition: width 500ms ease-in-out;
-            width: 56%;
-        }
 
-        p {
-            overflow: hidden;
-            white-space: nowrap;
-            &:hover {
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-            }
-        }
+    .check {
+      color: u.$color-background;
+      border-radius: 50%;
+      font-size: 1.5em;
+      white-space: nowrap;
+      transform: rotate(95deg);
+      transition: all 0.5s;
     }
+
+    &:hover .check {
+      transform: rotate(-360deg);
+      transition: all 0.5s;
+    }
+  }
+  #card-height {
+    line-height: 100%;
+    font-size: medium;
+  }
+  .text-wrap {
+    flex: none;
+    width: 75%;
+    margin: 1em 0em 1em 1em;
+    line-height: 1.5em;
+    transition: width 500ms ease-in-out;
+    &:hover {
+      @include u.text-fade-in;
+    }
+    &:active {
+      @include u.text-fade-in;
+    }
+
+    p {
+      overflow: hidden;
+      white-space: nowrap;
+      &:hover {
+        @include u.p-fade;
+      }
+      &:active {
+        @include u.p-fade;
+      }
+    }
+  }
 }
 .menu__price {
-    text-align: center;
-    flex: none;
-    width: 25%;
+  text-align: center;
+  flex: none;
+  width: 25%;
 
-    b {
-        position: relative;
-        top: 2.5em;
-        transition: width 500ms ease-in-out;
-    }
+  b {
+    position: relative;
+    top: 2.5em;
+    transition: width 500ms ease-in-out;
+  }
 }

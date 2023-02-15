@@ -1,4 +1,4 @@
-@use '../util' as u;
+@use "../util" as u;
 
 *,
 *::after,
@@ -10,13 +10,15 @@
 }
 body {
     font-family: u.$font-primary;
+    height: 100vh;
+    width: 96vw;
 }
 
-a{
+a {
     color: black;
 }
-b{
-    &:hover{
+b {
+    &:hover {
         color: u.$color-Primary;
     }
 }

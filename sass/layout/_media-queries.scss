@@ -1,5 +1,8 @@
 //tablet//
 @media screen and (min-width: 768px) {
+  body {
+    width: 97.6vw;
+  }
   .res-wrapper {
     display: flex;
     flex-direction: column;
@@ -9,8 +12,12 @@
     flex-direction: column;
     justify-content: space-around;
   }
-
+  .menu__content {
+    margin-top: 40%;
+    width: 100%;
+  }
   .wrap {
+    width: 100%;
     img {
       width: 100%;
       height: 20em;
@@ -23,6 +30,7 @@
       width: 4.5em;
     }
   }
+
   .menu__section {
     display: flex;
     flex-direction: column;
@@ -31,23 +39,10 @@
     margin: 0 auto;
     padding-top: 2em;
   }
-  .menu__button {
-    left: 15em;
-  }
-  .menu__header {
-    bottom: 2em;
-
-    i {
-      position: absolute;
-      left: 25em;
-      font-size: 25px;
-    }
-  }
 
   footer {
     .container {
       display: flex;
-      flex-direction: row;
       align-items: center;
       gap: 2em;
       position: relative;
@@ -56,6 +51,9 @@
 }
 //small desktop//
 @media screen and (min-width: 1024px) {
+  body {
+    width: 98.3vw;
+  }
   .restaurants {
     display: flex;
     flex-direction: column;
@@ -63,14 +61,29 @@
     justify-content: space-around;
     gap: 1em;
   }
-  .menu__header {
-    position: absolute;
-    left: 2em;
-    bottom: 78em;
+
+  .menu__content {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12% !important; // FIX: THIS IS HAPPENING DUE TO COMPONENT OVERRIDING LAYOUTS
+    flex-wrap: wrap !important;
   }
-  .heart-section {
-    position: absolute;
-    right: 19em;
+  .menu__header {
+    width: 100vw !important;
+    justify-content: space-around;
+    height: 4em;
+    padding: 1em;
+    margin: 1em;
+    .heart-section {
+      padding-top: 2em;
+    }
+  }
+  .menu__subtitle {
+    padding-top: 0px !important;
   }
 }
 
@@ -85,9 +98,13 @@
   flex-direction: row;
 }
 .menu__button {
-  top: 27em;
-  left: 24em;
   margin: 0 auto;
+}
+
+footer .container {
+  flex-direction: row !important;
+  justify-content: center;
+  height: 5em !important;
 }
 
 //medium desktop//
@@ -97,16 +114,12 @@
     padding-top: 2em;
   }
   .navigation__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     white-space: nowrap;
     gap: 2em;
 
     button {
       display: flex;
       white-space: nowrap;
-      // padding: 0em 2em 0em 4em;
     }
   }
 
@@ -114,10 +127,8 @@
     position: relative;
   }
   .menu__header {
-    position: absolute;
-    left: 3em;
-    bottom: 27em;
     font-size: larger;
+    justify-content: space-around;
 
     i {
       display: inline-flex;
@@ -126,7 +137,7 @@
     }
   }
   .menu__content {
-    width: 86em;
+    width: 85.3em;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -143,36 +154,72 @@
     font-size: small;
   }
   .menu__button {
-    top: 30em;
-    left: 36em;
     margin: 0 auto;
   }
 
-  footer {
-    .container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      gap: 10em;
-      margin-right: 5em;
-    }
+  footer,
+  .container {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10em;
+    margin-right: 5em;
+    width: 100%;
   }
 }
 //large desktop//
 @media screen and (min-width: 2560px) {
-  .menu__content {
-    width: 160em;
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-  .menu__button {
-    right: 50em;
-  }
-}
 
-.res-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3em;
+  .res-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+  }
+  main h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .menu__header .heart-section {
+    padding-top: 0em;
+  }
+
+  .menu__content {
+    width: 100vw !important;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 1em;
+    margin: 1em;
+    margin-top: 10% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding-bottom: 10em;
+  }
+  .menu__header {
+    width: 100vw !important;
+    padding: 1em;
+    margin: 1em;
+  }
+  .menu__subtitle {
+    width: 30%;
+    margin: 0 !important;
+  }
+  .menu__section {
+    width: 100%;
+    gap: 4em !important;
+  }
+  .menu__card {
+    width: 90%;
+  }
 }

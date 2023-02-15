@@ -152,6 +152,8 @@
 
 body {
   font-family: roboto;
+  height: 100vh;
+  width: 96vw;
 }
 
 a {
@@ -163,6 +165,9 @@ b:hover {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    width: 97.6vw;
+  }
   .res-wrapper {
     display: flex;
     flex-direction: column;
@@ -171,6 +176,13 @@ b:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .menu__content {
+    margin-top: 40%;
+    width: 100%;
+  }
+  .wrap {
+    width: 100%;
   }
   .wrap img {
     width: 100%;
@@ -189,26 +201,17 @@ b:hover {
     margin: 0 auto;
     padding-top: 2em;
   }
-  .menu__button {
-    left: 15em;
-  }
-  .menu__header {
-    bottom: 2em;
-  }
-  .menu__header i {
-    position: absolute;
-    left: 25em;
-    font-size: 25px;
-  }
   footer .container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 2em;
     position: relative;
   }
 }
 @media screen and (min-width: 1024px) {
+  body {
+    width: 98.3vw;
+  }
   .restaurants {
     display: flex;
     flex-direction: column;
@@ -216,14 +219,28 @@ b:hover {
     justify-content: space-around;
     gap: 1em;
   }
-  .menu__header {
-    position: absolute;
-    left: 2em;
-    bottom: 78em;
+  .menu__content {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12% !important;
+    flex-wrap: wrap !important;
   }
-  .heart-section {
-    position: absolute;
-    right: 19em;
+  .menu__header {
+    width: 100vw !important;
+    justify-content: space-around;
+    height: 4em;
+    padding: 1em;
+    margin: 1em;
+  }
+  .menu__header .heart-section {
+    padding-top: 2em;
+  }
+  .menu__subtitle {
+    padding-top: 0px !important;
   }
 }
 .menu__card {
@@ -240,9 +257,13 @@ b:hover {
 }
 
 .menu__button {
-  top: 27em;
-  left: 24em;
   margin: 0 auto;
+}
+
+footer .container {
+  flex-direction: row !important;
+  justify-content: center;
+  height: 5em !important;
 }
 
 @media screen and (min-width: 1383px) {
@@ -251,9 +272,6 @@ b:hover {
     padding-top: 2em;
   }
   .navigation__button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     white-space: nowrap;
     gap: 2em;
   }
@@ -265,10 +283,8 @@ b:hover {
     position: relative;
   }
   .menu__header {
-    position: absolute;
-    left: 3em;
-    bottom: 27em;
     font-size: larger;
+    justify-content: space-around;
   }
   .menu__header i {
     display: inline-flex;
@@ -276,7 +292,7 @@ b:hover {
     left: 96em;
   }
   .menu__content {
-    width: 86em;
+    width: 85.3em;
     height: 90%;
     display: flex;
     justify-content: center;
@@ -292,35 +308,71 @@ b:hover {
     font-size: small;
   }
   .menu__button {
-    top: 30em;
-    left: 36em;
     margin: 0 auto;
   }
-  footer .container {
+  footer,
+  .container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
     justify-content: center;
     gap: 10em;
     margin-right: 5em;
+    width: 100%;
   }
 }
 @media screen and (min-width: 2560px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .res-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+  }
+  main h2 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .menu__header .heart-section {
+    padding-top: 0em;
+  }
   .menu__content {
-    width: 160em;
+    width: 100vw !important;
+    justify-content: space-around;
+    height: 100vh;
+    padding: 1em;
+    margin: 1em;
+    margin-top: 10% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding-bottom: 10em;
   }
-  .menu__button {
-    right: 50em;
+  .menu__header {
+    width: 100vw !important;
+    padding: 1em;
+    margin: 1em;
+  }
+  .menu__subtitle {
+    width: 30%;
+    margin: 0 !important;
+  }
+  .menu__section {
+    width: 100%;
+    gap: 4em !important;
+  }
+  .menu__card {
+    width: 90%;
   }
 }
-.res-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 3em;
-}
-
 .logo {
   height: 3.5em;
   display: flex;
@@ -412,22 +464,20 @@ b:hover {
   background-color: #f6f6f6;
   border-radius: 2.6em 2.6em 0 0;
   position: relative;
-  top: 14em;
   margin: 0 auto;
-  margin-bottom: 14em;
-  padding: 5em 2em;
+  padding: 0em 1em;
 }
 
 .menu__header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .menu__header h2 {
   white-space: nowrap;
   font-family: shrikhand;
   font-size: 1.4em;
   font-weight: 300;
-  margin-right: 5em;
 }
 
 .menu__subtitle {
@@ -444,10 +494,15 @@ b:hover {
   margin: 1em 0em;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px 10px;
+}
+
 .menu__button {
   position: relative;
-  left: -50em;
-  top: 14em;
   font-size: 1em;
   height: 3em;
   color: white;
@@ -471,10 +526,6 @@ main {
   background-color: #f6f6f6;
   margin-top: 5em;
   padding: 20px;
-}
-main h2 {
-  display: flex;
-  justify-content: center;
 }
 main h2:hover {
   color: #9356dc;
@@ -526,7 +577,7 @@ main .card__restaurants__text {
 }
 
 .heart-section {
-  margin-top: -2em;
+  display: grid;
 }
 .heart-section .icon--full {
   color: white;
@@ -542,12 +593,25 @@ main .card__restaurants__text {
   opacity: 0;
   transition-duration: 0.5s;
 }
+.heart-section:active .icon--full {
+  background: linear-gradient(#ff79da 0%, #9356dc 100%);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.9s;
+}
+.heart-section:active .icon--empty {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
 
 .fa-heart {
-  position: absolute;
-  left: 11em;
+  position: relative !important;
+  left: 0px !important;
   font-size: 1.5em;
   cursor: pointer;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .arrow {
@@ -660,9 +724,9 @@ footer {
 }
 footer .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   gap: 0.5em;
-  height: 13.5em;
+  height: 13.5em !important;
   margin-left: 2em;
   color: white;
   position: relative;
@@ -688,6 +752,10 @@ main {
 main h2 {
   display: flex;
   justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
 main h2:hover {
   color: #9356dc;
@@ -713,30 +781,24 @@ main .card__Restaurants {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
 }
-main .card__Restaurants p {
+main p {
   font-weight: 300;
 }
-main .card__Restaurants p:hover {
+main p:hover {
   color: #9356dc;
 }
-main .card__Restaurants span {
-  position: relative;
-  left: 17.4em;
-  bottom: 9em;
-  background-color: #99e2d0;
-  color: #217460;
-  padding: 0.4em 1.5em;
-  border-radius: 5px;
-  font-size: 0.9em;
-  font-weight: 500;
+
+.menu__header {
+  width: 100%;
 }
-main .card__Restaurants__text {
-  margin: 5px 14px;
-  line-height: 1.4em;
-}
-main .card__Restaurants__text__height {
-  margin: -15px 14px;
-  line-height: 1.4em;
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20%;
+  padding-bottom: 4em;
 }
 
 .menu__section {
@@ -800,11 +862,20 @@ main .card__Restaurants__text__height {
   transition: width 500ms ease-in-out;
   width: 56%;
 }
+.menu__section .text-wrap:active {
+  transition: width 500ms ease-in-out;
+  width: 56%;
+}
 .menu__section .text-wrap p {
   overflow: hidden;
   white-space: nowrap;
 }
 .menu__section .text-wrap p:hover {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__section .text-wrap p:active {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
