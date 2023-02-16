@@ -208,6 +208,18 @@ b:hover {
   }
 }
 @media screen and (min-width: 1024px) {
+  .navigation {
+    height: 15em;
+    padding-top: 2em;
+  }
+  .navigation__button {
+    white-space: nowrap;
+    gap: 2em;
+  }
+  .navigation__button button {
+    display: flex;
+    white-space: nowrap;
+  }
   .restaurants {
     display: flex;
     flex-direction: column;
