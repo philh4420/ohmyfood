@@ -104,10 +104,14 @@
     margin: 0 auto;
   }
 
-  footer .alt__container {
+  footer .container {
     flex-direction: row !important;
     justify-content: center;
     height: 5em !important;
+
+    a {
+      gap: 2em !important;
+    }
   }
 }
 //medium desktop//

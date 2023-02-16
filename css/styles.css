@@ -255,10 +255,13 @@ b:hover {
   .menu__button {
     margin: 0 auto;
   }
-  footer .alt__container {
+  footer .container {
     flex-direction: row !important;
     justify-content: center;
     height: 5em !important;
+  }
+  footer .container a {
+    gap: 2em !important;
   }
 }
 @media screen and (min-width: 1383px) {
@@ -680,7 +683,6 @@ footer .container {
   height: 13.5em;
   margin-left: 2em;
   color: white;
-  position: relative;
 }
 footer .container a {
   color: white;
