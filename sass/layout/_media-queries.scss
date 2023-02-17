@@ -43,6 +43,9 @@
     align-items: center;
     gap: 2em;
   }
+  .menu__subtitle {
+    width: 100%;
+  }
 }
 //small desktop//
 @media screen and (min-width: 1024px) {
@@ -96,6 +99,7 @@
   .menu__card {
     width: 20em;
     font-size: small;
+    height: fit-content;
   }
   .menu__subtitle {
     width: 19em;
@@ -159,6 +163,7 @@
   .menu__card {
     width: 25em;
     font-size: small;
+    height: fit-content;
   }
   .menu__button {
     margin: 0 auto;
@@ -169,63 +174,55 @@
     align-items: center;
     justify-content: center;
     gap: 10em;
-    margin-right: 5em;
+    padding-right: 5em;
     width: 100%;
   }
 }
+//large desktop
+@media screen and (min-width: 1400px) {
+  .menu__content {
+    align-items: flex-start;
+  }
+  .menu__subtitle {
+    width: 20%;
+    height: 100%;
+  }
+}
 //large desktop//
-// @media screen and (min-width: 2560px) {
+// @media screen and (min-width: 2000px) {
 //   body {
 //     // height: 100% !important;
 //     // width: 100% !important;
 //     display: flex;
 //     flex-direction: column;
 //     justify-content: space-between;
+//     height: 100vh;
 //   }
 
-//   .res-wrapper {
-//     height: 100%;
-//     flex-wrap: nowrap;
+//   .restaurants {
+//     flex-grow: 3;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
 //   }
-//   .card_section {
-//     width: 100%;
-//     height: 100%;
-//   }
-//   main h2 {
-//     margin-top: 0 !important;
-//     margin-bottom: 0 !important;
-//   }
-//   .menu__header .heart-section {
-//     padding-top: 0em;
+
+//   .wrap > img {
+//     object-fit: cover;
+//     width: 100vh;
+//     right: 2em;
+//     height: 100vh;
+//     animation: fade-in 2000ms forwards;
+//     filter: blur(12px);
 //   }
 
 //   .menu__content {
-//     width: 100vw !important;
-//     justify-content: space-around;
-//     height: 100vh;
-//     padding: 1em;
-//     margin: 1em;
-//     margin-top: 10% !important;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 5em;
-//     padding-bottom: 10em;
-//   }
-//   .menu__header {
-//     width: 100vw !important;
-//     padding: 1em;
-//     margin: 1em;
-//   }
-//   .menu__subtitle {
-//     width: 30%;
-//     margin: 0 !important;
-//   }
-//   .menu__section {
-//     width: 100%;
-//     gap: 4em !important;
-//   }
-//   .menu__card {
-//     width: 90%;
+//     /* justify-content: flex-start; */
+//     align-content: flex-start;
+//     height: -webkit-fit-content;
+//     align-self: flex-start;
+//     justify-self: flex-start;
+//     /* position: absolute; */
+//     transform: translateY(-100%);
+//     border-radius: 2% !important;
 //   }
 // }

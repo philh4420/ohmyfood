@@ -1,9 +1,19 @@
+//mobile
 @use "../util/" as u;
+html {
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 .menu__content {
   background-color: u.$light-gray;
   margin-top: 5em;
   padding: 20px;
+  width: 100%;
 
   h2 {
     display: flex;
@@ -77,6 +87,7 @@
     white-space: nowrap;
     cursor: pointer;
     position: relative;
+    height: fit-content;
 
     .rotate {
       display: flex;
@@ -148,4 +159,8 @@
     top: 2.5em;
     transition: width 500ms ease-in-out;
   }
+}
+
+.menu__subtitle {
+  width: 100%;
 }

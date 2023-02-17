@@ -1,3 +1,4 @@
+//mobile
 @use "../util" as u;
 // Header
 .logo {
@@ -346,7 +347,7 @@ footer {
         flex-direction: column;
         gap: 0.5em;
         height: 13.5em;
-        margin-left: 2em;
+        padding-left: 2em;
         color: u.$color-background;
 
         a {

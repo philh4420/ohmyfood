@@ -150,6 +150,10 @@
   text-decoration: none;
 }
 
+html {
+  height: -moz-fit-content;
+}
+
 body {
   font-family: roboto;
   height: 100%;
@@ -162,6 +166,16 @@ a {
 
 b:hover {
   color: #9356dc;
+}
+
+.text-wrap > p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.text-wrap > h3 {
+  white-space: pre-wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -205,6 +219,9 @@ b:hover {
   footer .container {
     align-items: center;
     gap: 2em;
+  }
+  .menu__subtitle {
+    width: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -257,6 +274,7 @@ b:hover {
   .menu__card {
     width: 20em;
     font-size: small;
+    height: fit-content;
   }
   .menu__subtitle {
     width: 19em;
@@ -319,6 +337,7 @@ b:hover {
   .menu__card {
     width: 25em;
     font-size: small;
+    height: fit-content;
   }
   .menu__button {
     margin: 0 auto;
@@ -329,8 +348,17 @@ b:hover {
     align-items: center;
     justify-content: center;
     gap: 10em;
-    margin-right: 5em;
+    padding-right: 5em;
     width: 100%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .menu__content {
+    align-items: flex-start;
+  }
+  .menu__subtitle {
+    width: 20%;
+    height: 100%;
   }
 }
 .logo {
@@ -693,7 +721,7 @@ footer .container {
   flex-direction: column;
   gap: 0.5em;
   height: 13.5em;
-  margin-left: 2em;
+  padding-left: 2em;
   color: white;
 }
 footer .container a {
@@ -709,10 +737,21 @@ footer .container p {
   font-size: 1.2em;
 }
 
+html {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .menu__content {
   background-color: #f6f6f6;
   margin-top: 5em;
   padding: 20px;
+  width: 100%;
 }
 .menu__content h2 {
   display: flex;
@@ -783,6 +822,7 @@ footer .container p {
   white-space: nowrap;
   cursor: pointer;
   position: relative;
+  height: fit-content;
 }
 .menu__section .menu__card .rotate {
   display: flex;
@@ -855,6 +895,10 @@ footer .container p {
   position: relative;
   top: 2.5em;
   transition: width 500ms ease-in-out;
+}
+
+.menu__subtitle {
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */
