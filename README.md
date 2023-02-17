@@ -1,6 +1,6 @@
 # ohmyfood
 
-Food booking app
+Food booking app <br>
 Github Repo: <https://github.com/philh4420/ohmyfood> <br>
 Live website : <https://philh4420.github.io/ohmyfood/>
 
