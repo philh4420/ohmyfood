@@ -1,7 +1,7 @@
 # ohmyfood
 
-Food booking app
-Github Repo: <https://github.com/philh4420/ohmyfood>
+Food booking app <br>
+Github Repo: <https://github.com/philh4420/ohmyfood> <br>
 Live website : <https://philh4420.github.io/ohmyfood/>
 
 I used HTML and SCSS to code and style the website.
