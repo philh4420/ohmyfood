@@ -670,10 +670,16 @@ b:hover {
 }
 .navigation__button button:hover {
   background-color: #e1d0f5;
-  color: white;
+  color: #000;
   transform: scale(1.07);
 }
-.navigation__button button:hover i {
+.navigation__button button:hover .fa-mobile-screen-button {
+  color: #9356dc;
+}
+.navigation__button button:hover .fa-list {
+  color: #9356dc;
+}
+.navigation__button button:hover .fa-store {
   color: #9356dc;
 }
 .navigation__button button:touch {
@@ -681,8 +687,17 @@ b:hover {
   color: white;
   transform: scale(1.07);
 }
-.navigation__button button:touch i {
+.navigation__button button:touch .fa-mobile-screen-button {
   color: #9356dc;
+  transform: scale(1.07);
+}
+.navigation__button button:touch .fa-list {
+  color: #9356dc;
+  transform: scale(1.07);
+}
+.navigation__button button:touch .fa-store {
+  color: #9356dc;
+  transform: scale(1.07);
 }
 .navigation__button button .circle__1,
 .navigation__button button .circle__2 {
@@ -718,24 +733,12 @@ b:hover {
   padding-right: 4em;
   font-size: medium;
 }
-.navigation__button button .fa-mobile-screen-button:hover {
-  color: #9356dc;
-}
-.navigation__button button .fa-mobile-screen-button:touch {
-  color: #9356dc;
-}
 .navigation__button .fa-list {
   display: flex;
   align-items: center;
   justify-content: center;
   padding-right: 4em;
   font-size: medium;
-}
-.navigation__button .fa-list:hover {
-  color: #9356dc;
-}
-.navigation__button .fa-list:touch {
-  color: #9356dc;
 }
 
 .fa-store {
@@ -746,30 +749,8 @@ b:hover {
   font-size: medium;
 }
 
-.fa-store:hover {
-  color: #9356dc;
-}
-
-.fa-store:touch {
-  color: #9356dc;
-}
-
 .closer {
   margin-right: 2em;
-}
-.closer .closer:hover {
-  color: #000;
-}
-.closer .closer:touch {
-  color: #000;
-}
-
-.go:hover {
-  color: #000;
-}
-
-.go:touch {
-  color: #000;
 }
 
 footer {

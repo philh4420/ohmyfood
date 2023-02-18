@@ -289,19 +289,35 @@
 
         &:hover {
             background-color: u.$light-blue;
-            color: u.$color-background;
+            color: u.$text-color;
             transform: scale(1.07);
         }
-        &:hover i {
+        &:hover .fa-mobile-screen-button {
             color: u.$color-Primary;
         }
+        &:hover .fa-list {
+            color: u.$color-Primary;
+        }
+        &:hover .fa-store {
+            color: u.$color-Primary;
+        }
+
         &:touch {
             background-color: u.$light-blue;
             color: u.$color-background;
             transform: scale(1.07);
         }
-        &:touch i {
+        &:touch .fa-mobile-screen-button {
             color: u.$color-Primary;
+            transform: scale(1.07);
+        }
+        &:touch .fa-list {
+            color: u.$color-Primary;
+            transform: scale(1.07);
+        }
+        &:touch .fa-store {
+            color: u.$color-Primary;
+            transform: scale(1.07);
         }
 
         .circle__1,
@@ -332,23 +348,11 @@
             padding-right: 4em;
             font-size: medium;
         }
-        .fa-mobile-screen-button:hover {
-            color: u.$color-Primary;
-        }
-        .fa-mobile-screen-button:touch {
-            color: u.$color-Primary;
-        }
     }
     .fa-list {
         @include u.flex-center;
         padding-right: 4em;
         font-size: medium;
-    }
-    .fa-list:hover {
-        color: u.$color-Primary;
-    }
-    .fa-list:touch {
-        color: u.$color-Primary;
     }
 }
 .fa-store {
@@ -356,27 +360,9 @@
     padding-right: 2em;
     font-size: medium;
 }
-.fa-store:hover {
-    color: u.$color-Primary;
-}
-.fa-store:touch {
-    color: u.$color-Primary;
-}
 
 .closer {
     margin-right: 2em;
-    .closer:hover {
-        color: u.$text-color;
-    }
-    .closer:touch {
-        color: u.$text-color;
-    }
-}
-.go:hover {
-    color: u.$text-color;
-}
-.go:touch {
-    color: u.$text-color;
 }
 
 // Footer
