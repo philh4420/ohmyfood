@@ -8,6 +8,8 @@
   height: 80px;
   transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
   animation: loader 1.1s infinite ease-in-out;
+  -moz-animation: loader 1.1s infinite ease-in-out;
+  -webkit-animation: loader 1.1s infinite ease-in-out;
   z-index: 100;
 
   .box {
@@ -17,7 +19,8 @@
     height: 40px;
     background-color: u.$green;
     animation: loaderBlock 1.1s infinite ease-in-out;
-
+    -moz-animation: loaderBlock 1.1s infinite ease-in-out;
+    -webkit-animation: loaderBlock 1.1s infinite ease-in-out;
     &:nth-child(1) {
       top: 0;
       left: 0;
@@ -27,12 +30,16 @@
       top: 0;
       right: 0;
       animation: loaderBlockInverse 1.1s infinite ease-in-out;
+      -moz-animation: loaderBlockInverse 1.1s infinite ease-in-out;
+      -webkit-animation: loaderBlockInverse 1.1s infinite ease-in-out;
     }
 
     &:nth-child(3) {
       bottom: 0;
       left: 0;
       animation: loaderBlockInverse 1.1s infinite ease-in-out;
+      -moz-animation: loaderBlockInverse 1.1s infinite ease-in-out;
+      -webkit-animation: loaderBlockInverse 1.1s infinite ease-in-out;
     }
 
     &:nth-child(4) {
@@ -50,6 +57,7 @@
   height: 100%;
   opacity: 0.1;
   -webkit-animation: disappear 750ms forwards;
+  -moz-animation: disappear 750ms forwards;
   animation: disappear 750ms forwards;
 }
 
@@ -70,10 +78,13 @@
 
 .menu__subtitle {
   animation: fade-in 1000ms forwards;
+  -moz-animation: fade-in 1000ms forwards;
+  -webkit-animation: fade-in 1000ms forwards;
 }
 
 .menu__header {
   -webkit-animation: fade-out 0.5s;
+  -moz-animation: fade-out 0.5s;
   animation: fade-out 0.5s;
 }
 

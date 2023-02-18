@@ -105,6 +105,10 @@ body {
       width: 10em;
       transition: 500ms ease-in-out;
     }
+    &:touch .rotate {
+      width: 10em;
+      transition: 500ms ease-in-out;
+    }
 
     .check {
       color: u.$color-background;
@@ -116,6 +120,10 @@ body {
     }
 
     &:hover .check {
+      transform: rotate(-360deg);
+      transition: all 0.5s;
+    }
+    &:touch .check {
       transform: rotate(-360deg);
       transition: all 0.5s;
     }

@@ -271,7 +271,7 @@
     justify-content: space-between;
     position: relative;
     height: 16em;
-    width: 20em;
+    width: 21em;
     padding-left: 0.1em;
     margin-top: 1em;
 
@@ -280,6 +280,7 @@
         background-color: u.$light-gray;
         border: u.$color-background;
         @include u.button-shadow;
+        flex-wrap: wrap;
         cursor: pointer;
         outline: none;
         height: 4.5em;
@@ -294,12 +295,20 @@
         &:hover i {
             color: u.$color-Primary;
         }
+        &:touch {
+            background-color: u.$light-blue;
+            color: u.$color-background;
+            transform: scale(1.07);
+        }
+        &:touch i {
+            color: u.$color-Primary;
+        }
 
         .circle__1,
         .circle__2 {
             @include u.flex-center;
             position: absolute;
-            right: 21em;
+            right: 22em;
             background-color: u.$color-Primary;
             border-radius: 2em;
             color: u.$color-background;
@@ -310,7 +319,7 @@
         .circle__3 {
             @include u.flex-center;
             position: absolute;
-            right: 21em;
+            right: 22.1em;
             background-color: u.$color-Primary;
             border-radius: 2em;
             color: u.$color-background;
@@ -318,24 +327,56 @@
             height: 2em;
             width: 2em;
         }
-        .icon {
+        .fa-mobile-screen-button {
             @include u.flex-center;
-            position: relative;
-            left: 3em;
+            padding-right: 4em;
+            font-size: medium;
         }
-        .fa-store {
-            margin-right: 9em;
+        .fa-mobile-screen-button:hover {
+            color: u.$color-Primary;
+        }
+        .fa-mobile-screen-button:touch {
+            color: u.$color-Primary;
         }
     }
+    .fa-list {
+        @include u.flex-center;
+        padding-right: 4em;
+        font-size: medium;
+    }
+    .fa-list:hover {
+        color: u.$color-Primary;
+    }
+    .fa-list:touch {
+        color: u.$color-Primary;
+    }
 }
+.fa-store {
+    @include u.flex-center;
+    padding-right: 2em;
+    font-size: medium;
+}
+.fa-store:hover {
+    color: u.$color-Primary;
+}
+.fa-store:touch {
+    color: u.$color-Primary;
+}
+
 .closer {
     margin-right: 2em;
+    .closer:hover {
+        color: u.$text-color;
+    }
+    .closer:touch {
+        color: u.$text-color;
+    }
 }
-.navigation__button i {
-    color: u.$color-icon;
-    position: absolute;
-    margin-right: 11em;
-    font-size: medium;
+.go:hover {
+    color: u.$text-color;
+}
+.go:touch {
+    color: u.$text-color;
 }
 
 // Footer
