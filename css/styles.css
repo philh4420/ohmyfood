@@ -586,29 +586,10 @@ b:hover {
   display: grid;
 }
 .heart-section .icon--full {
-  color: white;
+  color: #f6f6f6;
 }
 .heart-section:hover .icon--full {
-  background: linear-gradient(#ff79da 0%, #9356dc 100%);
-  background-clip: inherit;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: color 0.9s;
-}
-.heart-section:hover .icon--empty {
-  opacity: 0;
-  transition-duration: 0.5s;
-}
-.heart-section:active .icon--full {
-  background: linear-gradient(#ff79da 0%, #9356dc 100%);
-  background-clip: inherit;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: color 0.9s;
-}
-.heart-section:active .icon--empty {
-  opacity: 0;
-  transition-duration: 0.5s;
+  color: #9356dc;
 }
 
 .fa-heart {
