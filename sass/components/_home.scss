@@ -223,15 +223,15 @@
         color: u.$color-Primary;
         // @include u.fill-up;
     }
-    // &:hover .icon--empty {
-    //     @include u.empty;
-    // }
-    // &:active .icon--full {
-    //     @include u.fill-up;
-    // }
-    // &:active .icon--empty {
-    //     @include u.empty;
-    // }
+    &:hover .icon--empty {
+        @include u.empty;
+    }
+    &:active .icon--full {
+        @include u.fill-up;
+    }
+    &:active .icon--empty {
+        @include u.empty;
+    }
 }
 .fa-heart {
     position: relative !important;
