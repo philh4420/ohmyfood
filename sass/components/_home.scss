@@ -2,393 +2,395 @@
 @use "../util" as u;
 // Header
 .logo {
-    height: 3.5em;
-    @include u.flex-center;
+  height: 3.5em;
+  @include u.flex-center;
 
-    img {
-        width: 150px;
-        margin: 1em;
-    }
+  img {
+    width: 150px;
+    margin: 1em;
+  }
 }
 .center-content {
-    @include u.flex-center;
+  @include u.flex-center;
 
-    .logo {
-        animation: fade-out 10s;
-    }
+  .logo {
+    animation: fade-out 10s;
+  }
 }
 .wrap {
-    position: absolute;
-    top: 3.5em;
+  position: absolute;
+  top: 3.5em;
 
-    img {
-        object-fit: cover;
-        width: 100%;
-        right: 2em;
-        animation: fade-in 2000ms forwards;
-    }
+  img {
+    object-fit: cover;
+    width: 100%;
+    right: 2em;
+    animation: fade-in 2000ms forwards;
+  }
 }
 #image-height {
-    height: 18em;
+  height: 18em;
 }
 
 .location {
-    background-color: u.$light-gray;
-    text-align: center;
-    height: 19em;
+  background-color: u.$light-gray;
+  text-align: center;
+  height: 19em;
 
-    &__nav {
-        @include u.flex-center;
-        background-color: u.$dark-gray;
-        border: 0.1em inset u.$color-background;
-        height: 2.5em;
-        i {
-            margin-right: 14px;
-        }
+  &__nav {
+    @include u.flex-center;
+    background-color: u.$dark-gray;
+    border: 0.1em inset u.$color-background;
+    height: 2.5em;
+    i {
+      margin-right: 14px;
+    }
+  }
+
+  &__menu {
+    @include u.flex-center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 15em;
+    padding: 0 1em;
+
+    h3 {
+      font-weight: 400;
+      font-size: 1.2em;
+      &:hover {
+        color: u.$color-Primary;
+      }
     }
 
-    &__menu {
-        @include u.flex-center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 15em;
-        padding: 0 1em;
-
-        h3 {
-            font-weight: 400;
-            font-size: 1.2em;
-            &:hover {
-                color: u.$color-Primary;
-            }
-        }
-
-        button {
-            font-size: 1em;
-            height: 3em;
-            color: u.$color-background;
-            @include u.btn-color;
-            text-align: center;
-            outline: none;
-            border: 0px solid rgb(28, 110, 164);
-            border-radius: 3rem;
-            width: 15em;
-            cursor: pointer;
-            @include u.button-shadow;
-            transition: all 1s ease-in-out;
-            &:hover {
-                @include u.button-shadow;
-                transform: scale(1.17);
-                color: black;
-            }
-        }
+    button {
+      font-size: 1em;
+      height: 3em;
+      color: u.$color-background;
+      @include u.btn-color;
+      text-align: center;
+      outline: none;
+      border: 0px solid rgb(28, 110, 164);
+      border-radius: 3rem;
+      width: 15em;
+      cursor: pointer;
+      @include u.button-shadow;
+      transition: all 1s ease-in-out;
+      &:hover {
+        @include u.button-shadow;
+        transform: scale(1.17);
+        color: black;
+      }
     }
+  }
 }
 
 .menu__content {
-    background-color: u.$light-gray;
-    border-radius: 2.6em 2.6em 0 0;
-    position: relative;
-    margin: 0 auto;
-    padding: 0em 1em;
+  background-color: u.$light-gray;
+  border-radius: 2.6em 2.6em 0 0;
+  position: relative;
+  margin: 0 auto;
+  padding: 0em 1em;
 }
 //menu subheader section//
 .menu__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    h2 {
-        white-space: nowrap;
-        font-family: u.$font-secondary;
-        font-size: 1.4em;
-        font-weight: 300;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h2 {
+    white-space: nowrap;
+    font-family: u.$font-secondary;
+    font-size: 1.8em;
+    font-weight: 300;
+  }
 }
 
 .menu__subtitle {
-    margin: 1em 0em 3em;
-    white-space: nowrap;
-    animation: fade-in 5s forwards;
+  margin: 1em 0em 3em;
+  white-space: nowrap;
+  animation: fade-in 5s forwards;
 
-    h4 {
-        white-space: nowrap;
-        font-weight: 400;
-        border-bottom: 3px u.$color-tertiary solid;
-        width: 33px;
-        height: 23px;
-        margin: 1em 0em;
-    }
+  h4 {
+    white-space: nowrap;
+    font-weight: 400;
+    border-bottom: 3px u.$color-tertiary solid;
+    width: 33px;
+    height: 23px;
+    margin: 1em 0em;
+  }
 }
 .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px 10px;
 }
 //order button//
 .menu__button {
-    position: relative;
-    font-size: 1em;
-    height: 3em;
-    color: u.$color-background;
-    @include u.btn-color;
-    text-align: center;
-    outline: none;
-    border: 0px solid rgb(28, 110, 164);
-    border-radius: 3em;
-    width: 12em;
-    cursor: pointer;
+  position: relative;
+  font-size: 1em;
+  height: 3em;
+  color: u.$color-background;
+  @include u.btn-color;
+  text-align: center;
+  outline: none;
+  border: 0px solid rgb(28, 110, 164);
+  border-radius: 3em;
+  width: 12em;
+  cursor: pointer;
+  @include u.button-shadow;
+  transform: scale(1);
+  transition: transform 400ms;
+  &:hover {
     @include u.button-shadow;
-    transform: scale(1);
-    transition: transform 400ms;
-    &:hover {
-        @include u.button-shadow;
-        transform: scale(1.15);
-    }
+    transform: scale(1.15);
+  }
 }
 
 // cards
 .restaurants {
-    background-color: u.$light-gray;
-    margin-top: 5em;
-    padding: 20px;
+  background-color: u.$light-gray;
+  margin-top: 5em;
+  padding: 20px;
 
-    h2 {
-        padding: 1em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  h2 {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    &:hover {
+      color: u.$color-Primary;
     }
-    h2 {
-        &:hover {
-            color: u.$color-Primary;
-        }
-    }
-    .card_section {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        padding-bottom: 35px;
+  }
+  .card_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 35px;
 
-        .card_image {
-            position: relative;
-        }
-        img {
-            object-fit: cover;
-            border-radius: 1em 1em 0em 0em;
-            height: 9.5em;
-            width: 21em;
-        }
+    .card_image {
+      position: relative;
     }
-    .card__restaurants {
-        background-color: u.$color-background;
-        width: 21em;
-        height: 14em;
-        border-radius: 1em 1em;
-        @include u.button-shadow;
-        position: relative;
-
-        p {
-            font-weight: 300;
-            &:hover {
-                color: u.$color-Primary;
-            }
-        }
-
-        .new {
-            position: absolute;
-            left: 17.4em;
-            bottom: 7.5em;
-            background-color: u.$color-tertiary;
-            color: darken(u.$color-tertiary, 45%);
-            padding: 0.6em 1.5em;
-            border-radius: 5px;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-        &__text {
-            margin: 5px 14px;
-            line-height: 1.4em;
-        }
+    img {
+      object-fit: cover;
+      border-radius: 1em 1em 0em 0em;
+      height: 9.5em;
+      width: 21em;
     }
+  }
+  .card__restaurants {
+    background-color: u.$color-background;
+    width: 21em;
+    height: 14em;
+    border-radius: 1em 1em;
+    @include u.button-shadow;
+    position: relative;
+
+    p {
+      font-weight: 300;
+      &:hover {
+        color: u.$color-Primary;
+      }
+    }
+
+    .new {
+      position: absolute;
+      left: 17.4em;
+      bottom: 7.5em;
+      background-color: u.$color-tertiary;
+      color: darken(u.$color-tertiary, 45%);
+      padding: 0.6em 1.5em;
+      border-radius: 5px;
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+    &__text {
+      margin: 5px 14px;
+      line-height: 1.4em;
+    }
+  }
 }
 
 // Icons
 .heart-section {
-    display: grid;
-    .icon--full {
-        color: u.$light-gray;
-    }
-    &:hover .icon--full {
-        color: u.$color-Primary;
-        // @include u.fill-up;
-    }
-    &:hover .icon--empty {
-        @include u.empty;
-    }
-    &:active .icon--full {
-        @include u.fill-up;
-    }
-    &:active .icon--empty {
-        @include u.empty;
-    }
+  display: grid;
+  .icon--full {
+    color: u.$light-gray;
+  }
+  &:active .icon--full {
+    color: u.$color-Primary;
+    @include u.fill-up;
+  }
+  &:active .icon--empty {
+    @include u.empty;
+  }
 }
 .fa-heart {
-    position: relative !important;
-    left: 0px !important;
-    font-size: 1.5em;
-    cursor: pointer;
-    grid-column: 1;
-    grid-row: 1;
+  position: relative !important;
+  left: 0px !important;
+  font-size: 1.5em;
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 1;
 }
 .arrow {
-    position: relative;
-    right: 4em;
-    font-size: 17px;
-    font-weight: 400;
-    &:hover {
-        color: u.$color-tertiary;
-    }
+  position: relative;
+  right: 4em;
+  font-size: 17px;
+  font-weight: 400;
+  &:hover {
+    color: u.$color-tertiary;
+  }
 }
 
 // Nav buttons
 
 .navigation {
-    margin-top: 2em;
-    @include u.flex-center;
-    flex-direction: column;
+  margin-top: 2em;
+  @include u.flex-center;
+  flex-direction: column;
 
-    h2 {
-        padding-bottom: 13px;
-        &:hover {
-            color: u.$color-Primary;
-        }
+  h2 {
+    padding-bottom: 13px;
+    &:hover {
+      color: u.$color-Primary;
     }
+  }
 }
 .navigation__button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    height: 16em;
-    width: 21em;
-    padding-left: 0.1em;
-    margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 16em;
+  width: 21em;
+  padding-left: 0.1em;
+  margin-top: 1em;
 
-    button {
-        @include u.flex-center;
-        background-color: u.$light-gray;
-        border: u.$color-background;
-        @include u.button-shadow;
-        flex-wrap: wrap;
-        cursor: pointer;
-        outline: none;
-        height: 4.5em;
-        border-radius: 1.25em;
-        transition: all 0.4s ease-in-out;
+  button {
+    @include u.flex-center;
+    background-color: u.$light-gray;
+    border: u.$color-background;
+    @include u.button-shadow;
+    flex-wrap: wrap;
+    cursor: pointer;
+    outline: none;
+    height: 4.5em;
+    border-radius: 1.25em;
+    transition: all 0.4s ease-in-out;
+    justify-content: flex-start;
+    padding-left: 2em;
+    font-weight: normal;
+    gap: 0.5em;
 
-        &:hover {
-            background-color: u.$light-blue;
-            color: u.$text-color;
-            transform: scale(1.07);
-        }
-        &:hover .fa-mobile-screen-button {
-            color: u.$color-Primary;
-        }
-        &:hover .fa-list {
-            color: u.$color-Primary;
-        }
-        &:hover .fa-store {
-            color: u.$color-Primary;
-        }
-
-        &:touch {
-            background-color: u.$light-blue;
-            color: u.$color-background;
-            transform: scale(1.07);
-        }
-        &:touch .fa-mobile-screen-button {
-            color: u.$color-Primary;
-            transform: scale(1.07);
-        }
-        &:touch .fa-list {
-            color: u.$color-Primary;
-            transform: scale(1.07);
-        }
-        &:touch .fa-store {
-            color: u.$color-Primary;
-            transform: scale(1.07);
-        }
-
-        .circle__1,
-        .circle__2 {
-            @include u.flex-center;
-            position: absolute;
-            right: 22em;
-            background-color: u.$color-Primary;
-            border-radius: 2em;
-            color: u.$color-background;
-            font-size: 0.9em;
-            height: 2em;
-            width: 2em;
-        }
-        .circle__3 {
-            @include u.flex-center;
-            position: absolute;
-            right: 22.1em;
-            background-color: u.$color-Primary;
-            border-radius: 2em;
-            color: u.$color-background;
-            font-size: 0.9em;
-            height: 2em;
-            width: 2em;
-        }
-        .fa-mobile-screen-button {
-            @include u.flex-center;
-            padding-right: 4em;
-            font-size: medium;
-        }
+    .icon {
+      width: 10%;
     }
-    .fa-list {
-        @include u.flex-center;
-        padding-right: 4em;
-        font-size: medium;
+
+    &:hover {
+      background-color: u.$light-blue;
+      color: u.$text-color;
+      transform: scale(1.07);
     }
+    &:hover .fa-mobile-screen-button {
+      color: u.$color-Primary;
+    }
+    &:hover .fa-list {
+      color: u.$color-Primary;
+    }
+    &:hover .fa-store {
+      color: u.$color-Primary;
+    }
+
+    &:hover {
+      background-color: u.$light-blue;
+      color: u.$color-background;
+      transform: scale(1.07);
+    }
+    &:hover .fa-mobile-screen-button {
+      color: u.$color-Primary;
+      transform: scale(1.07);
+    }
+    &:hover .fa-list {
+      color: u.$color-Primary;
+      transform: scale(1.07);
+    }
+    &:hover .fa-store {
+      color: u.$color-Primary;
+      transform: scale(1.07);
+    }
+
+    .circle__1,
+    .circle__2 {
+      @include u.flex-center;
+      position: absolute;
+      right: 22em;
+      background-color: u.$color-Primary;
+      border-radius: 2em;
+      color: u.$color-background;
+      font-size: 0.9em;
+      height: 2em;
+      width: 2em;
+    }
+    .circle__3 {
+      @include u.flex-center;
+      position: absolute;
+      right: 22.1em;
+      background-color: u.$color-Primary;
+      border-radius: 2em;
+      color: u.$color-background;
+      font-size: 0.9em;
+      height: 2em;
+      width: 2em;
+    }
+    .fa-mobile-screen-button {
+      @include u.flex-center;
+      padding-right: 4em;
+      font-size: medium;
+    }
+  }
+  .fa-list {
+    @include u.flex-center;
+    padding-right: 4em;
+    font-size: medium;
+  }
 }
 .fa-store {
-    @include u.flex-center;
-    padding-right: 2em;
-    font-size: medium;
+  @include u.flex-center;
+  padding-right: 2em;
+  font-size: medium;
 }
 
 .closer {
-    margin-right: 2em;
+  margin-right: 2em;
 }
 
 // Footer
 footer {
-    background-color: darken(u.$color-background, 80%);
+  background-color: darken(u.$color-background, 80%);
+  color: u.$color-background;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    height: 13.5em;
+    padding-left: 2em;
     color: u.$color-background;
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5em;
-        height: 13.5em;
-        padding-left: 2em;
-        color: u.$color-background;
 
-        a {
-            color: u.$color-background;
-            text-decoration: none;
-        }
-
-        i {
-            margin-right: 0.75em;
-        }
-        p {
-            margin: 1em 0em;
-            font-family: u.$font-secondary;
-            font-size: 1.2em;
-        }
+    a {
+      color: u.$color-background;
+      text-decoration: none;
     }
+
+    i {
+      margin-right: 0.75em;
+    }
+    p {
+      margin: 1em 0em;
+      font-family: u.$font-secondary;
+      font-size: 1.2em;
+    }
+  }
 }

@@ -305,6 +305,24 @@ b:hover {
   footer .container a {
     gap: 2em !important;
   }
+  .heart-section {
+    display: grid;
+  }
+  .heart-section .icon--full {
+    color: #f6f6f6;
+  }
+  .heart-section:hover .icon--full {
+    color: #9356dc;
+    background: linear-gradient(#ff79da 0%, #9356dc 100%);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: color 0.9s;
+  }
+  .heart-section:hover .icon--empty {
+    opacity: 0;
+    transition-duration: 0.5s;
+  }
 }
 @media screen and (min-width: 1383px) {
   .navigation {
@@ -476,7 +494,7 @@ b:hover {
 .menu__header h2 {
   white-space: nowrap;
   font-family: shrikhand;
-  font-size: 1.4em;
+  font-size: 1.8em;
   font-weight: 300;
 }
 
@@ -588,14 +606,8 @@ b:hover {
 .heart-section .icon--full {
   color: #f6f6f6;
 }
-.heart-section:hover .icon--full {
-  color: #9356dc;
-}
-.heart-section:hover .icon--empty {
-  opacity: 0;
-  transition-duration: 0.5s;
-}
 .heart-section:active .icon--full {
+  color: #9356dc;
   background: linear-gradient(#ff79da 0%, #9356dc 100%);
   background-clip: inherit;
   -webkit-background-clip: text;
@@ -663,6 +675,13 @@ b:hover {
   height: 4.5em;
   border-radius: 1.25em;
   transition: all 0.4s ease-in-out;
+  justify-content: flex-start;
+  padding-left: 2em;
+  font-weight: normal;
+  gap: 0.5em;
+}
+.navigation__button button .icon {
+  width: 10%;
 }
 .navigation__button button:hover {
   background-color: #e1d0f5;
@@ -678,20 +697,20 @@ b:hover {
 .navigation__button button:hover .fa-store {
   color: #9356dc;
 }
-.navigation__button button:touch {
+.navigation__button button:hover {
   background-color: #e1d0f5;
   color: white;
   transform: scale(1.07);
 }
-.navigation__button button:touch .fa-mobile-screen-button {
+.navigation__button button:hover .fa-mobile-screen-button {
   color: #9356dc;
   transform: scale(1.07);
 }
-.navigation__button button:touch .fa-list {
+.navigation__button button:hover .fa-list {
   color: #9356dc;
   transform: scale(1.07);
 }
-.navigation__button button:touch .fa-store {
+.navigation__button button:hover .fa-store {
   color: #9356dc;
   transform: scale(1.07);
 }
@@ -784,6 +803,17 @@ body {
   width: 100%;
 }
 
+.menu__header {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  word-wrap: break-word;
+}
+.menu__header h2 {
+  white-space: pre-wrap !important;
+  width: 70%;
+  word-wrap: break-word;
+}
+
 .menu__content {
   background-color: #f6f6f6;
   margin-top: 5em;
@@ -795,8 +825,6 @@ body {
   justify-content: center;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
-  margin-bottom: 5%;
 }
 .menu__content h2:hover {
   color: #9356dc;
@@ -873,11 +901,11 @@ body {
   overflow: hidden;
   transition: 500ms ease-in-out;
 }
-.menu__section .menu__card:hover .rotate {
+.menu__section .menu__card:active .rotate {
   width: 10em;
   transition: 500ms ease-in-out;
 }
-.menu__section .menu__card:touch .rotate {
+.menu__section .menu__card:active .rotate {
   width: 10em;
   transition: 500ms ease-in-out;
 }
@@ -889,11 +917,11 @@ body {
   transform: rotate(95deg);
   transition: all 0.5s;
 }
-.menu__section .menu__card:hover .check {
+.menu__section .menu__card:active .check {
   transform: rotate(-360deg);
   transition: all 0.5s;
 }
-.menu__section .menu__card:touch .check {
+.menu__section .menu__card:active .check {
   transform: rotate(-360deg);
   transition: all 0.5s;
 }
@@ -912,7 +940,7 @@ body {
   transition: width 500ms ease-in-out;
   width: 56%;
 }
-.menu__section .text-wrap:active {
+.menu__section .text-wrap:hover {
   transition: width 500ms ease-in-out;
   width: 56%;
 }
@@ -925,7 +953,7 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.menu__section .text-wrap p:active {
+.menu__section .text-wrap p:hover {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

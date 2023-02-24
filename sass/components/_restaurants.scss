@@ -9,6 +9,17 @@ body {
   width: 100%;
 }
 
+.menu__header {
+  padding-top: 2em;
+  padding-bottom: 1em;
+  word-wrap: break-word;
+  h2 {
+    white-space: pre-wrap !important;
+    width: 70%;
+    word-wrap: break-word;
+  }
+}
+
 .menu__content {
   background-color: u.$light-gray;
   margin-top: 5em;
@@ -20,8 +31,6 @@ body {
     justify-content: center;
     display: flex;
     justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 5%;
     &:hover {
       color: u.$color-Primary;
     }
@@ -101,11 +110,11 @@ body {
       overflow: hidden;
       transition: 500ms ease-in-out;
     }
-    &:hover .rotate {
+    &:active .rotate {
       width: 10em;
       transition: 500ms ease-in-out;
     }
-    &:touch .rotate {
+    &:active .rotate {
       width: 10em;
       transition: 500ms ease-in-out;
     }
@@ -119,11 +128,11 @@ body {
       transition: all 0.5s;
     }
 
-    &:hover .check {
+    &:active .check {
       transform: rotate(-360deg);
       transition: all 0.5s;
     }
-    &:touch .check {
+    &:active .check {
       transform: rotate(-360deg);
       transition: all 0.5s;
     }
@@ -141,7 +150,7 @@ body {
     &:hover {
       @include u.text-fade-in;
     }
-    &:active {
+    &:hover {
       @include u.text-fade-in;
     }
 
@@ -151,7 +160,7 @@ body {
       &:hover {
         @include u.p-fade;
       }
-      &:active {
+      &:hover {
         @include u.p-fade;
       }
     }

@@ -1,3 +1,5 @@
+@use "../util" as u;
+
 //tablet//
 @media screen and (min-width: 768px) {
   .res-wrapper {
@@ -116,6 +118,20 @@
     height: 5em !important;
     a {
       gap: 2em !important;
+    }
+  }
+  // Icons
+  .heart-section {
+    display: grid;
+    .icon--full {
+      color: u.$light-gray;
+    }
+    &:hover .icon--full {
+      color: u.$color-Primary;
+      @include u.fill-up;
+    }
+    &:hover .icon--empty {
+      @include u.empty;
     }
   }
 }
