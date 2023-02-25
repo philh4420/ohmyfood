@@ -374,6 +374,8 @@ footer {
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 0.5em;
     height: 13.5em;
     padding-left: 2em;
@@ -386,6 +388,7 @@ footer {
 
     i {
       margin-right: 0.75em;
+      padding-right: 1em;
     }
     p {
       margin: 1em 0em;
